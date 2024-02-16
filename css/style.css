@@ -1,0 +1,221 @@
+@font-face{
+    font-family:'League Spartan';
+    src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf');
+}
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /*League Spartan font 400 500 700 */
+    --League-Spartan-font:League Spartan;
+    /*Primary color*/
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /*Neutral color*/
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+    /*font size*/
+    --Fsize-body:15px
+}
+body{
+    min-height: 100vh;
+    font-family: var(--League-Spartan-font);
+    background: url("../images/bg-pattern-top-mobile.svg")left top no-repeat,
+                url('../images/bg-pattern-bottom-mobile.svg') right bottom no-repeat;
+    background-color: var(--White);
+    position: relative;
+}
+main{
+    width: 100%;
+}
+section{
+    padding: 62px 30px;
+}
+.Text-Rated .Text{
+    text-align: center;
+}
+.Text-Rated .Text h1{
+    color: var(--Very-Dark-Magenta);
+    font-size: 40px;
+    margin-bottom: 26px;
+}
+.Text-Rated .Text p{
+    color: var(--Very-Dark-Magenta);
+    line-height: 1.3;
+    font-weight: 500;
+    font-size: 18px;
+}
+/*rating section*/
+.Text-Rated .Rating-stars{
+    text-align: center;
+    margin-top: 30px;
+}
+.Text-Rated .Rating-stars > div{
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 7px;
+    padding: 16px 0px;
+}
+.Text-Rated .Rating-stars > div:not(:last-child){
+    margin-bottom: 18px;
+}
+.Text-Rated .Rating-stars .stars img:not(:first-child){
+    margin-left: 4px;
+}
+.Text-Rated .Rating-stars .Num-of-stars{
+    color:var(--Very-Dark-Magenta) ;
+    font-weight:700 ;
+    margin-top: 7px;
+}
+/*Customers section*/
+.Customers{
+    margin-top: 30px;
+}
+.Customers .card{
+    padding: 30px;
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    border-radius: 7px;
+}
+.Customers .one ,.Customers .two{
+    margin-bottom: 15px;
+}
+.Customers img{
+    width: 100%;
+    display: block;
+}
+.Customers .card .image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.Customers .card figure{
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+}
+.Customers .card figcaption span{
+    display: block;
+    font-weight: 500;
+    font-size: 17px;
+}
+.Customers .card figcaption span:last-child{
+    color: var(--Soft-Pink);
+    margin-top: 5px;
+    font-weight: 400;
+}
+.Customers .card p{
+    margin-top: 20px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    .Text-Rated .Rating-stars > div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+}
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width:768px) {  
+    .Text-Rated .Rating-stars{
+        margin: 30px auto 0;
+        width: fit-content;
+    }
+    .Text-Rated .Rating-stars > div{
+        width: 447px;
+    }
+    .Text-Rated .Rating-stars > div:nth-child(2){
+        margin-left: 50px;
+    }
+    .Text-Rated .Rating-stars > div:last-child{
+        margin-left: 100px;
+    }
+    .Customers{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .Customers .card{
+        width: 40%;
+        margin: 0;
+    }
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    section{
+        width: 1170px;
+        margin: 0 auto;
+    } 
+    .Text-Rated{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+/* Extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    body{
+        background: url("../images/bg-pattern-top-desktop.svg")left top no-repeat,
+                    url('../images/bg-pattern-bottom-desktop.svg') right bottom no-repeat;
+        background-color: var(--White);
+    }
+    .Customers .card{
+        width: 350px;
+        align-self: flex-start;
+        padding: 41px 35px;
+    }
+    .Customers .card p{
+        margin-top: 23px;
+        line-height: 1.4;
+    }
+    .Customers{
+        margin-top: 70px;
+    }
+    .Customers .two{
+        margin-top: 16px;
+    }
+    .Customers .three{
+        margin-top: 32px;
+    }
+    .Text-Rated .Text{
+        text-align: left;
+        padding-right: 10rem;
+    }
+    .Text-Rated .Text h1{
+        font-size: 51px;
+    }
+    .Text-Rated .Text p{
+        font-size: 16.3px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+    .Text-Rated .Rating-stars > div .Num-of-stars{
+        margin-top: 0;
+        margin-left: 27px;
+    }
+    .Text-Rated .Rating-stars > div{
+        font-size: 17px;
+        padding: 17px 29px;
+        font-size: 700;
+        justify-content: unset;
+    }
+
+}
